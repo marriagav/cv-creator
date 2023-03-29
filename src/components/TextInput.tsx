@@ -2,17 +2,26 @@ import React, { useState } from "react";
 
 interface TextInputProps {
   className: string;
-  value: string;
   placeholder: string;
-  // setInputFields: Function;
+  subSection: subSection;
+  onInputChange: Function;
+  cvSection: cvSection;
+  key: string;
 }
 
 function TextInput(props: TextInputProps) {
-  const [inputValue, setInputValue] = useState(props.value);
+  const [inputValue, setInputValue] = useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
     setInputValue(newValue);
+    props.onInputChange({
+      title: props.cvSection.sectionHeader,
+      index: props.cvSection.sectionIndex,
+      subIndex: props.subSection.index,
+      placeholder: props.placeholder,
+      value: newValue,
+    });
   };
 
   return (

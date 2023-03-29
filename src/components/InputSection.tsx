@@ -5,6 +5,7 @@ import "../styles/styles.css";
 
 interface InputSectionProps {
   className: string;
+  onInputChange: Function;
 }
 
 function InputSection(props: InputSectionProps) {
@@ -14,10 +15,8 @@ function InputSection(props: InputSectionProps) {
     return (
       <CvSection
         className="CvSection"
-        sectionHeader={cvSection.sectionHeader}
-        hasDeleteButton={cvSection.hasDeleteButton}
-        hasAddButton={cvSection.hasAddButton}
-        sectionInputs={cvSection.sectionInputs}
+        cvSection={cvSection}
+        onInputChange={props.onInputChange}
         key={cvSection.key}
       ></CvSection>
     );

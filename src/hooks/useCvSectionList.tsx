@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function createTextInput(placeholder: string, value: string): textInput {
-  return { placeholder: placeholder, value: "" };
+  return { placeholder: placeholder };
 }
 
 const personalInfoPlaceholders = [
@@ -50,6 +50,7 @@ const educationCVSection: cvSection = {
   hasDeleteButton: true,
   hasAddButton: true,
   key: uuidv4(),
+  sectionIndex: 2,
 };
 
 const experienceCVSection: cvSection = {
@@ -58,6 +59,7 @@ const experienceCVSection: cvSection = {
   hasDeleteButton: true,
   hasAddButton: true,
   key: uuidv4(),
+  sectionIndex: 1,
 };
 
 const infoCVSection: cvSection = {
@@ -66,6 +68,7 @@ const infoCVSection: cvSection = {
   hasDeleteButton: false,
   hasAddButton: false,
   key: uuidv4(),
+  sectionIndex: 0,
 };
 
 function useCvSectionList() {

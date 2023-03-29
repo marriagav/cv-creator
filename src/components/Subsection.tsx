@@ -7,6 +7,8 @@ interface SubsectionProps {
   subSection: subSection;
   onDeleteButton(event: React.MouseEvent, subsectionId: string): void;
   hasDeleteButton: boolean;
+  onInputChange: Function;
+  cvSection: cvSection;
 }
 
 function Subsection(props: SubsectionProps) {
@@ -14,8 +16,10 @@ function Subsection(props: SubsectionProps) {
     props.subSection.sectionInputs.map((input) => {
       return (
         <TextInput
+          cvSection={props.cvSection}
+          subSection={props.subSection}
+          onInputChange={props.onInputChange}
           className="textInput"
-          value={input.value}
           placeholder={input.placeholder}
           key={uuidv4()}
         />

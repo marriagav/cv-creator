@@ -5,10 +5,8 @@ import { v4 as uuidv4 } from "uuid";
 
 interface CvSectionProps {
   className: string;
-  sectionHeader: string;
-  hasAddButton: boolean;
-  hasDeleteButton: boolean;
-  sectionInputs: textInput[];
+  cvSection: cvSection;
+  onInputChange: Function;
 }
 
 function CvSection(props: CvSectionProps) {
@@ -16,7 +14,8 @@ function CvSection(props: CvSectionProps) {
     [
       {
         key: uuidv4(),
-        sectionInputs: props.sectionInputs,
+        sectionInputs: props.cvSection.sectionInputs,
+        index: 0,
       },
     ]
   );
@@ -26,28 +25,28 @@ function CvSection(props: CvSectionProps) {
   }
 
   function createSubSection(event: React.MouseEvent) {
-    const generatedId = uuidv4();
-    console.log(generatedId);
-    addSubsection(props.sectionInputs, uuidv4());
+    addSubsection(props.cvSection.sectionInputs, uuidv4());
   }
 
   let subSections = subSectionList.map((subSection) => {
     return (
       <Subsection
+        onInputChange={props.onInputChange}
         className="subSection"
         subSection={subSection}
         onDeleteButton={removeSubSection}
-        hasDeleteButton={props.hasDeleteButton}
+        hasDeleteButton={props.cvSection.hasDeleteButton}
         key={subSection.key}
+        cvSection={props.cvSection}
       ></Subsection>
     );
   });
 
   return (
     <div className={props.className}>
-      <h2>{props.sectionHeader}</h2>
+      <h2>{props.cvSection.sectionHeader}</h2>
       {subSections}
-      {props.hasAddButton && (
+      {props.cvSection.hasAddButton && (
         <button className="generalButton" onClick={createSubSection}>
           Add
         </button>
