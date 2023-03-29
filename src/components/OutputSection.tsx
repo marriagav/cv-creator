@@ -1,9 +1,11 @@
 import React from "react";
 
-interface OutputSectionProps {}
+interface OutputSectionProps {
+  className: string;
+}
 
-function OutputSection() {
-  return <div></div>;
+function OutputSection(props: OutputSectionProps) {
+  return <div className={props.className}></div>;
 }
 
 export default OutputSection;

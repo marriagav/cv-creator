@@ -9,7 +9,7 @@ function App() {
       <NavBar className="navBar" title="CV Creator"></NavBar>
       <main>
         <InputSection className="inputSection"></InputSection>
-        <OutputSection></OutputSection>
+        <OutputSection className="outputSection"></OutputSection>
       </main>
       {/* <Footer></Footer> */}
     </div>
