@@ -4,7 +4,7 @@ CV creator app made with ReactJS
 
 [Live preview](https://marriagav.github.io/cv-creator/)
 
-
+<img width="1510" alt="image" src="https://user-images.githubusercontent.com/65412950/228934373-a08f0288-c556-4ec0-aed2-7a794b2fa221.png">
 
 
 # Getting Started with Create React App
