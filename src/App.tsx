@@ -21,7 +21,6 @@ function App() {
         ></InputSection>
         <OutputSection data={data} className="outputSection"></OutputSection>
       </main>
-      {/* <Footer></Footer> */}
     </div>
   );
 }
