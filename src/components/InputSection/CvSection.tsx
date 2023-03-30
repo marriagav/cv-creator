@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import useSubsectionList from "./hooks/useSubSectionList";
 import Subsection from "./Subsection";
-import useSubsectionList from "../hooks/useSubSectionList";
 import { v4 as uuidv4 } from "uuid";
 
 interface CvSectionProps {

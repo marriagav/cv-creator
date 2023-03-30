@@ -1,30 +1,14 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import {
+  personalInfoPlaceholders,
+  experiencePlaceholders,
+  educationPlaceholders,
+} from "../../../constants";
 
 function createTextInput(placeholder: string, value: string): textInput {
   return { placeholder: placeholder };
 }
-
-const personalInfoPlaceholders = [
-  "First name",
-  "Last name",
-  "Title",
-  "Address",
-  "Phone number",
-  "Email",
-  "Description",
-];
-
-const experiencePlaceholders = ["Position", "Company", "City", "From", "To"];
-
-const educationPlaceholders = [
-  "University name",
-  "City",
-  "Degree",
-  "Subject",
-  "From",
-  "To",
-];
 
 const personalInfoInputs: textInput[] = personalInfoPlaceholders.map(
   (placeholder: string) => {

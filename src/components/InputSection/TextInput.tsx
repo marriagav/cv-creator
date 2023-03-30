@@ -21,7 +21,7 @@ function TextInput(props: TextInputProps) {
       subIndex: props.subSection.index,
       placeholder: props.placeholder,
       value: newValue,
-    });
+    } as dataResponse);
   };
 
   return (

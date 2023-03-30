@@ -1,7 +1,7 @@
 import React from "react";
 import CvSection from "./CvSection";
-import useCvSectionList from "../hooks/useCvSectionList";
-import "../styles/styles.css";
+import useCvSectionList from "./hooks/useCvSectionList";
+import "../../styles/styles.css";
 
 interface InputSectionProps {
   className: string;

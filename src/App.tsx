@@ -1,18 +1,16 @@
-import React from "react";
-import InputSection from "./components/InputSection";
-import OutputSection from "./components/OutputSection";
+import InputSection from "./components/InputSection/InputSection";
+import OutputSection from "./components/OutputSection/OutputSection";
 import NavBar from "./components/NavBar";
+import React, { useState } from "react";
+import useCvOutputValues from "./components/OutputSection/hooks/useCvOutputValues";
 
 function App() {
-  const handleChange = (response: {
-    title: string;
-    index: number;
-    subIndex: number;
-    placeholder: string;
-    value: string;
-  }) => {
-    console.log(response);
+  const { data, addValue } = useCvOutputValues();
+
+  const handleChange = (response: dataResponse) => {
+    addValue(response);
   };
+
   return (
     <div className="App">
       <NavBar className="navBar" title="CV Creator"></NavBar>
@@ -21,7 +19,7 @@ function App() {
           className="inputSection"
           onInputChange={handleChange}
         ></InputSection>
-        <OutputSection className="outputSection"></OutputSection>
+        <OutputSection data={data} className="outputSection"></OutputSection>
       </main>
       {/* <Footer></Footer> */}
     </div>
