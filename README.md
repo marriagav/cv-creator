@@ -2,6 +2,9 @@
 
 CV creator app made with ReactJS
 
+![image](https://user-images.githubusercontent.com/65412950/228928529-08a42021-6212-4572-b4aa-79137bf58a1e.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
