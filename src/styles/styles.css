@@ -32,17 +32,22 @@ main {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   margin-top: 3%;
   margin-bottom: 3%;
   gap: 3%;
+}
+
+.inputSection {
+  padding: 3%;
+  box-sizing: border-box;
+  width: clamp(550px, 40%, max(90vw, 55rem));
 }
 
 .inputSection,
 .outputSection {
   background-color: var(--white);
   border-radius: 5px;
-  padding: 3%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -67,7 +72,6 @@ main {
 }
 
 .textInput {
-  width: clamp(max(35vw, 30rem), 300px, max(90vw, 55rem));
   border-radius: 5px;
   border: 1px solid;
   height: 30px;
@@ -85,4 +89,95 @@ main {
   height: 30px;
   font-weight: bolder;
   margin-bottom: 1%;
+  width: 100%;
 }
+
+.outputSection {
+  height: 900px;
+  width: 550px;
+  top: 10px;
+  position: sticky;
+}
+
+.personalTopBar {
+  background-color: darkblue;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5%;
+}
+
+.personalTopBar > h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.personalTopBar > h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.personalTopBar > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.personalDetails > p {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+}
+
+.outputSectionEducation,
+.outputSectionExperience {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.experienceEducationOutput {
+  padding-top: 3%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.outputHeaderExperience,
+.outputHeaderEducation {
+  font-size: large;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.experienceEducationOutput > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.experienceEducationOutput > h3,
+.experienceEducationOutput > div > h3 {
+  font-weight: bold;
+}
+
+.experienceEducationOutput > div > p {
+  font-size: small;
+}
+
+/* .outputValueFrom {
+  order: 1;
+}
+
+.outputValueTo {
+  order: 2;
+} */
