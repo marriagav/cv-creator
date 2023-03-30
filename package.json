@@ -47,5 +47,5 @@
     "@types/uniqid": "^5.3.2",
     "gh-pages": "^5.0.0"
   },
-  "homepage": "https://marriagav.github.io/cv-creator"
+  "homepage": "http://marriagav.github.io/cv-creator"
 }
